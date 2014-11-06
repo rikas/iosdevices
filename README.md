@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rikas/iosdevices.svg)](https://travis-ci.org/rikas/iosdevices)
+
 # Ios::Devices
 
 This is a little Gem used to translate Apple iOS device types (like "iPhone6,1") to proper device
