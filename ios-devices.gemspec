@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{iOS device model translation from Apple device types.}
   spec.description   = %q{With this gem you can read the device type that every iOS device can send
     and translate it to a proper model name.}
-  spec.homepage      = 'http://github.com/rikas/ios-devices'
+  spec.homepage      = 'http://github.com/rikas/iosdevices'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
