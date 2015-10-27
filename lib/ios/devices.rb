@@ -80,6 +80,10 @@ module Ios
         Model.new(device_type, 'iPad mini 3', 'Wi-Fi')
       when 'iPad4,8', 'iPad4,9'
         Model.new(device_type, 'iPad mini 3')
+      when 'iPad5,1'
+        Model.new(device_type, 'iPad mini 4', 'Wi-Fi')
+      when 'iPad5,2'
+        Model.new(device_type, 'iPad mini 4', 'Wi-Fi+LTE')
       when 'iPad5,3'
         Model.new(device_type, 'iPad Air 2', 'Wi-Fi')
       when 'iPad5,4'
