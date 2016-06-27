@@ -44,6 +44,8 @@ module Ios
         Model.new(device_type, 'iPhone 6s')
       when 'iPhone8,2'
         Model.new(device_type, 'iPhone 6s Plus')
+      when 'iPhone8,4'
+        Model.new(device_type, 'iPhone SE')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad2,1'
