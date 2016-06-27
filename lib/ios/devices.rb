@@ -92,10 +92,14 @@ module Ios
         Model.new(device_type, 'iPad Air 2', 'Wi-Fi')
       when 'iPad5,4'
         Model.new(device_type, 'iPad Air 2', 'Wi-Fi+LTE')
+      when 'iPad6,3'
+        Model.new(device_type, 'iPad Pro 9.7"', 'Wi-Fi')
+      when 'iPad6,4'
+        Model.new(device_type, 'iPad Pro 9.7"', 'Wi-Fi+LTE')
       when 'iPad6,7'
-        Model.new(device_type, 'iPad Pro', 'Wi-Fi')
+        Model.new(device_type, 'iPad Pro 12.9"', 'Wi-Fi')
       when 'iPad6,8'
-        Model.new(device_type, 'iPad Pro', 'Wi-Fi+LTE')
+        Model.new(device_type, 'iPad Pro 12.9"', 'Wi-Fi+LTE')
       when 'iPod1,1'
         Model.new(device_type, 'iPod touch')
       when 'iPod2,1'
