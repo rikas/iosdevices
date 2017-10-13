@@ -106,6 +106,18 @@ module Ios
         Model.new(device_type, 'iPad Pro 12.9"', 'Wi-Fi')
       when 'iPad6,8'
         Model.new(device_type, 'iPad Pro 12.9"', 'Wi-Fi+LTE')
+      when 'iPad6,11'
+        Model.new(device_type, 'iPad', '5th gen, Wi-Fi')
+      when 'iPad6,12'
+        Model.new(device_type, 'iPad', '5th gen, Wi-Fi+LTE')
+      when 'iPad7,1'
+        Model.new(device_type, 'iPad Pro 12.9"', '2nd gen, Wi-Fi')
+      when 'iPad7,2'
+        Model.new(device_type, 'iPad Pro 12.9"', '2nd gen, Wi-Fi+LTE')
+      when 'iPad7,3'
+        Model.new(device_type, 'iPad Pro 10.5"', 'Wi-Fi')
+      when 'iPad7,4'
+        Model.new(device_type, 'iPad Pro 10.5"', 'Wi-Fi+LTE')
       when 'iPod1,1'
         Model.new(device_type, 'iPod touch')
       when 'iPod2,1'
