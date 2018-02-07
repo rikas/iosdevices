@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Ios
   module Devices
-    # Represents an iOS device model. Every device has a type and name and some of them also have
-    # extra information (Revision, Wi-fi, etc.)
+    # Represents an iOS device model. Every device has a type and name and some
+    # of them also have extra information (Revision, Wi-fi, etc.)
     class Model
       attr_accessor :device_type, :name, :extra
 

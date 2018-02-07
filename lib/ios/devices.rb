@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ios/devices/version'
 require 'ios/devices/model'
 
