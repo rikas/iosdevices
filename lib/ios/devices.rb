@@ -134,6 +134,10 @@ module Ios
         Model.new(device_type, 'iPod touch', '4th gen')
       when 'iPod5,1'
         Model.new(device_type, 'iPod touch', '5th gen')
+      when 'iPod6,1'
+        Model.new(device_type, 'iPod touch', '6th gen')
+      when 'iPod7,1'
+        Model.new(device_type, 'iPod touch', '7th gen')
       else
         Model.new(device_type, 'Unknown iOS device')
       end
