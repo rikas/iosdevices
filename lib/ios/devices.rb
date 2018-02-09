@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ios/devices/version'
 require 'ios/devices/model'
 
@@ -50,6 +52,12 @@ module Ios
         Model.new(device_type, 'iPhone 7')
       when 'iPhone9,2', 'iPhone9,4'
         Model.new(device_type, 'iPhone 7 Plus')
+      when 'iPhone10,1', 'iPhone10,4'
+        Model.new(device_type, 'iPhone 8')
+      when 'iPhone10,2', 'iPhone10,5'
+        Model.new(device_type, 'iPhone 8 Plus')
+      when 'iPhone10,3', 'iPhone10,6'
+        Model.new(device_type, 'iPhone X')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad2,1'
@@ -128,6 +136,10 @@ module Ios
         Model.new(device_type, 'iPod touch', '4th gen')
       when 'iPod5,1'
         Model.new(device_type, 'iPod touch', '5th gen')
+      when 'iPod6,1'
+        Model.new(device_type, 'iPod touch', '6th gen')
+      when 'iPod7,1'
+        Model.new(device_type, 'iPod touch', '7th gen')
       else
         Model.new(device_type, 'Unknown iOS device')
       end
