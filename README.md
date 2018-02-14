@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/rikas/iosdevices.svg)](https://travis-ci.org/rikas/iosdevices)
+[![Gem Version](https://badge.fury.io/rb/iosdevices.svg)](https://badge.fury.io/rb/iosdevices) [![Build Status](https://travis-ci.org/rikas/iosdevices.svg?branch=master)](https://travis-ci.org/rikas/iosdevices) [![Dependency Status](https://gemnasium.com/rikas/iosdevices.svg)](https://gemnasium.com/rikas/iosdevices)
 
 # Ios::Devices
 
@@ -30,16 +30,16 @@ connection, revision model, etc.
 ```ruby
   device = Ios::Devices.search('iPhone6,1')
   => #<Ios::Devices::Model:0x007fa55ba1a948 @extra=nil, @name="iPhone 5s", @device_type="iPhone6,1">
-  
+
   device.name
   => "iPhone 5s"
 
   device = Ios::Devices.search('iPad2,2')
   => #<Ios::Devices::Model:0x007fa55b957308 @extra="GSM", @name="iPad 2", @device_type="iPad2,2">
-  
+
   device.name
   => "iPad 2"
-  
+
   device.extra
   => "GSM"
 ```
