@@ -64,6 +64,12 @@ module Ios
         Model.new(device_type, 'iPhone XS Max')
       when 'iPhone11,8'
         Model.new(device_type, 'iPhone XR')
+      when 'iPhone12,1'
+        Model.new(device_type, 'iPhone 11')
+      when 'iPhone12,3'
+        Model.new(device_type, 'iPhone 11 Pro')
+      when 'iPhone12,5'
+        Model.new(device_type, 'iPhone 11 Pro Max')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad2,1'
@@ -170,9 +176,9 @@ module Ios
         Model.new(device_type, 'iPod touch', '4th gen')
       when 'iPod5,1'
         Model.new(device_type, 'iPod touch', '5th gen')
-      when 'iPod6,1'
-        Model.new(device_type, 'iPod touch', '6th gen')
       when 'iPod7,1'
+        Model.new(device_type, 'iPod touch', '6th gen')
+      when 'iPod9,1'
         Model.new(device_type, 'iPod touch', '7th gen')
       else
         Model.new(device_type, 'Unknown iOS device')
