@@ -4,6 +4,8 @@ require 'spec_helper'
 
 describe Ios::Devices do
   describe '.search' do
+    subject(:model) { Ios::Devices.search(input) }
+
     it 'returns a model object' do
       model = Ios::Devices.search('iPhone6,2')
 
@@ -21,6 +23,13 @@ describe Ios::Devices do
       model = Ios::Devices.search('iPad8,9')
 
       expect(model.name).to eq('Unknown iOS device')
+    end
+
+    context 'with Apple Watch5,4' do
+      let(:input) { 'Watch5,4' }
+
+      it { expect(model.name).to eq('Apple Watch') }
+      it { expect(model.extra).to eq('Series 5, 44mm, GPS+Cellular') }
     end
   end
 end

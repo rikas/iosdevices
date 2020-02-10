@@ -180,6 +180,42 @@ module Ios
         Model.new(device_type, 'iPod touch', '6th gen')
       when 'iPod9,1'
         Model.new(device_type, 'iPod touch', '7th gen')
+      when 'Watch1,1'
+        Model.new(device_type, 'Apple Watch', '38mm')
+      when 'Watch1,2'
+        Model.new(device_type, 'Apple Watch', '42mm')
+      when 'Watch2,6'
+        Model.new(device_type, 'Apple Watch', 'Series 1, 38mm')
+      when 'Watch2,7'
+        Model.new(device_type, 'Apple Watch', 'Series 1, 42mm')
+      when 'Watch2,3'
+        Model.new(device_type, 'Apple Watch', 'Series 2, 38mm')
+      when 'Watch2,4'
+        Model.new(device_type, 'Apple Watch', 'Series 2, 42mm')
+      when 'Watch3,1'
+        Model.new(device_type, 'Apple Watch', 'Series 3, 38mm, GPS+Cellular')
+      when 'Watch3,2'
+        Model.new(device_type, 'Apple Watch', 'Series 3, 42mm, GPS+Cellular')
+      when 'Watch3,3'
+        Model.new(device_type, 'Apple Watch', 'Series 3, 38mm, GPS')
+      when 'Watch3,4'
+        Model.new(device_type, 'Apple Watch', 'Series 3, 42mm, GPS')
+      when 'Watch4,1'
+        Model.new(device_type, 'Apple Watch', 'Series 4, 40mm, GPS')
+      when 'Watch4,2'
+        Model.new(device_type, 'Apple Watch', 'Series 4, 44mm, GPS')
+      when 'Watch4,3'
+        Model.new(device_type, 'Apple Watch', 'Series 4, 40mm, GPS+Cellular')
+      when 'Watch4,4'
+        Model.new(device_type, 'Apple Watch', 'Series 4, 44mm, GPS+Cellular')
+      when 'Watch5,1'
+        Model.new(device_type, 'Apple Watch', 'Series 5, 40mm, GPS')
+      when 'Watch5,2'
+        Model.new(device_type, 'Apple Watch', 'Series 5, 44mm, GPS')
+      when 'Watch5,3'
+        Model.new(device_type, 'Apple Watch', 'Series 5, 40mm, GPS+Cellular')
+      when 'Watch5,4'
+        Model.new(device_type, 'Apple Watch', 'Series 5, 44mm, GPS+Cellular')
       else
         Model.new(device_type, 'Unknown iOS device')
       end
