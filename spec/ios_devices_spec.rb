@@ -20,7 +20,7 @@ describe Ios::Devices do
     end
 
     it 'returns a model object with "Unknown iOS device" for unknown device types' do
-      model = Ios::Devices.search('iPad8,9')
+      model = Ios::Devices.search('iPad8,13')
 
       expect(model.name).to eq('Unknown iOS device')
     end
