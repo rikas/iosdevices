@@ -28,6 +28,8 @@ module Ios
         Model.new(device_type, 'iPhone 3GS')
       when 'iPhone3,1'
         Model.new(device_type, 'iPhone 4', 'GSM')
+      when 'iPhone3,2'
+        Model.new(device_type, 'iPhone 4', 'GSM Rev A')
       when 'iPhone3,3'
         Model.new(device_type, 'iPhone 4', 'CDMA')
       when 'iPhone4,1'
@@ -60,7 +62,7 @@ module Ios
         Model.new(device_type, 'iPhone X')
       when 'iPhone11,2'
         Model.new(device_type, 'iPhone XS')
-      when 'iPhone11,6'
+      when 'iPhone11,4', 'iPhone11,6'
         Model.new(device_type, 'iPhone XS Max')
       when 'iPhone11,8'
         Model.new(device_type, 'iPhone XR')
