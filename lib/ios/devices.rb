@@ -18,7 +18,7 @@ module Ios
       # This list was taken from here:
       # http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x/ios-device-types
       case device_type
-      when 'x86_64'
+      when 'i386', 'x86_64', 'arm64'
         Model.new(device_type, 'iOS Simulator')
       when 'iPhone1,1'
         Model.new(device_type, 'iPhone')
