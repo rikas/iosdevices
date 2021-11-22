@@ -80,6 +80,14 @@ module Ios
         Model.new(device_type, 'iPhone 12 Pro')
       when 'iPhone13,4'
         Model.new(device_type, 'iPhone 12 Pro Max')
+      when 'iPhone14,2'
+        Model.new(device_type, 'iPhone 13 Pro')
+      when 'iPhone14,3'
+        Model.new(device_type, 'iPhone 13 Pro Max')
+      when 'iPhone14,4'
+        Model.new(device_type, 'iPhone 13 Mini')
+      when 'iPhone14,5'
+        Model.new(device_type, 'iPhone 13')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad2,1'
@@ -172,6 +180,14 @@ module Ios
         Model.new(device_type, 'iPad Pro 12.9"', '3nd gen, Wi-Fi+LTE')
       when 'iPad8,8'
         Model.new(device_type, 'iPad Pro 12.9"', '3nd gen, Wi-Fi+LTE')
+      when 'iPad8,9'
+        Model.new(device_type, 'iPad Pro 11"', '2nd gen, Wi-Fi')
+      when 'iPad8,10'
+        Model.new(device_type, 'iPad Pro 11"', '2nd gen, Wi-Fi+LTE')
+      when 'iPad8,11'
+        Model.new(device_type, 'iPad Pro 12.9"', '4th gen, Wi-Fi')
+      when 'iPad8,12'
+        Model.new(device_type, 'iPad Pro 12.9"', '4th gen, Wi-Fi+LTE')
       when 'iPad11,1'
         Model.new(device_type, 'iPad mini 5', 'Wi-Fi')
       when 'iPad11,2'
@@ -184,10 +200,26 @@ module Ios
         Model.new(device_type, 'iPad', '8th gen, Wi-Fi')
       when 'iPad11,7'
         Model.new(device_type, 'iPad', '8th gen, Wi-Fi+LTE')
+      when 'iPad12,1'
+        Model.new(device_type, 'iPad', '9th gen, Wi-Fi')
+      when 'iPad12,2'
+        Model.new(device_type, 'iPad', '9th gen, Wi-Fi+LTE')
       when 'iPad13,1'
         Model.new(device_type, 'iPad Air 4', 'Wi-Fi')
       when 'iPad13,2'
         Model.new(device_type, 'iPad Air 4', 'Wi-Fi+LTE')
+      when 'iPad13,4'
+        Model.new(device_type, 'iPad Pro 11"', '3rd gen, Wi-Fi')
+      when 'iPad13,5', 'iPad13,6', 'iPad13,7'
+        Model.new(device_type, 'iPad Pro 11"', '3rd gen, Wi-Fi+LTE')
+      when 'iPad13,8'
+        Model.new(device_type, 'iPad Pro 12.9"', '5th gen, Wi-Fi')
+      when 'iPad13,9', 'iPad13,10', 'iPad13,11'
+        Model.new(device_type, 'iPad Pro 12.9"', '5th gen, Wi-Fi+LTE')
+      when 'iPad14,1'
+        Model.new(device_type, 'iPad mini 6', 'Wi-Fi')
+      when 'iPad14,2'
+        Model.new(device_type, 'iPad mini 6', 'Wi-Fi+LTE')
       when 'iPod1,1'
         Model.new(device_type, 'iPod touch')
       when 'iPod2,1'
@@ -238,6 +270,30 @@ module Ios
         Model.new(device_type, 'Apple Watch', 'Series 5, 40mm, GPS+Cellular')
       when 'Watch5,4'
         Model.new(device_type, 'Apple Watch', 'Series 5, 44mm, GPS+Cellular')
+      when 'Watch5,9'
+        Model.new(device_type, 'Apple Watch', 'SE, 40mm, GPS')
+      when 'Watch5,10'
+        Model.new(device_type, 'Apple Watch', 'SE, 44mm, GPS')
+      when 'Watch5,11'
+        Model.new(device_type, 'Apple Watch', 'SE, 40mm, GPS+Cellular')
+      when 'Watch5,12'
+        Model.new(device_type, 'Apple Watch', 'SE, 44mm, GPS+Cellular')
+      when 'Watch6,1'
+        Model.new(device_type, 'Apple Watch', 'Series 6, 40mm, GPS')
+      when 'Watch6,2'
+        Model.new(device_type, 'Apple Watch', 'Series 6, 44mm, GPS')
+      when 'Watch6,3'
+        Model.new(device_type, 'Apple Watch', 'Series 6, 40mm, GPS+Cellular')
+      when 'Watch6,4'
+        Model.new(device_type, 'Apple Watch', 'Series 6, 44mm, GPS+Cellular')
+      when 'Watch6,6'
+        Model.new(device_type, 'Apple Watch', 'Series 7, 41mm, GPS')
+      when 'Watch6,7'
+        Model.new(device_type, 'Apple Watch', 'Series 7, 45mm, GPS')
+      when 'Watch6,8'
+        Model.new(device_type, 'Apple Watch', 'Series 7, 41mm, GPS+Cellular')
+      when 'Watch6,9'
+        Model.new(device_type, 'Apple Watch', 'Series 7, 45mm, GPS+Cellular')
       else
         Model.new(device_type, 'Unknown iOS device')
       end
