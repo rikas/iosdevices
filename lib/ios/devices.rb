@@ -90,6 +90,8 @@ module Ios
         Model.new(device_type, 'iPhone 13 Mini')
       when 'iPhone14,5'
         Model.new(device_type, 'iPhone 13')
+      when 'iPhone14,6'
+        Model.new(device_type, 'iPhone SE', '3rd gen')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad2,1'
