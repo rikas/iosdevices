@@ -1,4 +1,4 @@
-[![Gem Version](https://badge.fury.io/rb/ios-devices.svg)](https://badge.fury.io/rb/ios-devices) [![Build Status](https://travis-ci.org/rikas/iosdevices.svg?branch=master)](https://travis-ci.org/rikas/iosdevices)
+[![Gem Version](https://badge.fury.io/rb/ios-devices.svg)](https://badge.fury.io/rb/ios-devices)
 
 # Ios::Devices
 
