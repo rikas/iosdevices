@@ -161,9 +161,9 @@ module Ios
       when 'iPad7,4'
         Model.new(device_type, 'iPad Pro 10.5"', 'Wi-Fi+LTE')
       when 'iPad7,5'
-        Model.new(device_type, 'iPad', '6rd gen, Wi-Fi')
+        Model.new(device_type, 'iPad', '6th gen, Wi-Fi')
       when 'iPad7,6'
-        Model.new(device_type, 'iPad', '6rd gen, Wi-Fi+LTE')
+        Model.new(device_type, 'iPad', '6th gen, Wi-Fi+LTE')
       when 'iPad7,11'
         Model.new(device_type, 'iPad 10.2"', '7th gen, Wi-Fi')
       when 'iPad7,12'
@@ -177,13 +177,13 @@ module Ios
       when 'iPad8,4'
         Model.new(device_type, 'iPad Pro 11"', 'Wi-Fi+LTE')
       when 'iPad8,5'
-        Model.new(device_type, 'iPad Pro 12.9"', '3nd gen, Wi-Fi')
+        Model.new(device_type, 'iPad Pro 12.9"', '3rd gen, Wi-Fi')
       when 'iPad8,6'
-        Model.new(device_type, 'iPad Pro 12.9"', '3nd gen, Wi-Fi')
+        Model.new(device_type, 'iPad Pro 12.9"', '3rd gen, Wi-Fi')
       when 'iPad8,7'
-        Model.new(device_type, 'iPad Pro 12.9"', '3nd gen, Wi-Fi+LTE')
+        Model.new(device_type, 'iPad Pro 12.9"', '3rd gen, Wi-Fi+LTE')
       when 'iPad8,8'
-        Model.new(device_type, 'iPad Pro 12.9"', '3nd gen, Wi-Fi+LTE')
+        Model.new(device_type, 'iPad Pro 12.9"', '3rd gen, Wi-Fi+LTE')
       when 'iPad8,9'
         Model.new(device_type, 'iPad Pro 11"', '2nd gen, Wi-Fi')
       when 'iPad8,10'
