@@ -1,6 +1,6 @@
 [![Gem Version](https://badge.fury.io/rb/ios-devices.svg)](https://badge.fury.io/rb/ios-devices)
 
-# Ios::Devices
+# iOS Devices
 
 This is a little Gem used to translate Apple iOS device types (like "iPhone6,1") to proper device
 names that you can use.
