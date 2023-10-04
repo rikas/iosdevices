@@ -92,6 +92,22 @@ module Ios
         Model.new(device_type, 'iPhone 13')
       when 'iPhone14,6'
         Model.new(device_type, 'iPhone SE', '3rd gen')
+      when 'iPhone14,7'
+        Model.new(device_type, 'iPhone 14')
+      when 'iPhone14,8'
+        Model.new(device_type, 'iPhone 14 Plus')
+      when 'iPhone15,2'
+        Model.new(device_type, 'iPhone 14 Pro')
+      when 'iPhone15,3'
+        Model.new(device_type, 'iPhone 14 Pro Max')
+      when 'iPhone15,4'
+        Model.new(device_type, 'iPhone 15')
+      when 'iPhone15,5'
+        Model.new(device_type, 'iPhone 15 Plus')
+      when 'iPhone16,1'
+        Model.new(device_type, 'iPhone 15 Pro')
+      when 'iPhone16,2'
+        Model.new(device_type, 'iPhone 15 Pro Max')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad2,1'
@@ -224,6 +240,14 @@ module Ios
         Model.new(device_type, 'iPad mini 6', 'Wi-Fi')
       when 'iPad14,2'
         Model.new(device_type, 'iPad mini 6', 'Wi-Fi+LTE')
+      when 'iPad14,3'
+        Model.new(device_type, 'iPad Pro 11', '4th Gen, Wi-Fi')
+      when 'iPad14,4'
+        Model.new(device_type, 'iPad Pro 11', '4th Gen, Wi-Fi+LTE')
+      when 'iPad14,5'
+        Model.new(device_type, 'iPad Pro 12.9', '6th Gen, Wi-Fi')
+      when 'iPad14,6'
+        Model.new(device_type, 'iPad Pro 12.9', '6th Gen, Wi-Fi+LTE')
       when 'iPod1,1'
         Model.new(device_type, 'iPod touch')
       when 'iPod2,1'
