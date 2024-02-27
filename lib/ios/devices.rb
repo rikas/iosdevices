@@ -4,6 +4,8 @@ require 'ios/devices/version'
 require 'ios/devices/model'
 
 module Ios
+  UNKNOWN_IOS_DEVICE = 'Unknown iOS device'
+
   module Devices
     # Gets the official device for the given device type from the iOS devices.
     #
@@ -110,6 +112,8 @@ module Ios
         Model.new(device_type, 'iPhone 15 Pro Max')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
+      when 'iPad1,2'
+        Model.new(device_type, 'iPad', '3G')
       when 'iPad2,1'
         Model.new(device_type, 'iPad 2', 'Wi-Fi')
       when 'iPad2,2'
@@ -236,6 +240,14 @@ module Ios
         Model.new(device_type, 'iPad Pro 12.9"', '5th gen, Wi-Fi')
       when 'iPad13,9', 'iPad13,10', 'iPad13,11'
         Model.new(device_type, 'iPad Pro 12.9"', '5th gen, Wi-Fi+LTE')
+      when 'iPad13,16'
+        Model.new(device_type, 'iPad Air', '5th gen, Wi-Fi')
+      when 'iPad13,17'
+        Model.new(device_type, 'iPad Air', '5th gen, Wi-Fi+LTE')
+      when 'iPad13,18'
+        Model.new(device_type, 'iPad', '10th gen, Wi-Fi')
+      when 'iPad13,19'
+        Model.new(device_type, 'iPad', '10th gen, Wi-Fi+LTE')
       when 'iPad14,1'
         Model.new(device_type, 'iPad mini 6', 'Wi-Fi')
       when 'iPad14,2'
@@ -322,8 +334,38 @@ module Ios
         Model.new(device_type, 'Apple Watch', 'Series 7, 41mm, GPS+Cellular')
       when 'Watch6,9'
         Model.new(device_type, 'Apple Watch', 'Series 7, 45mm, GPS+Cellular')
+      when 'Watch6,10'
+        Model.new(device_type, 'Apple Watch', 'SE 2, 40mm, GPS')
+      when 'Watch6,10'
+        Model.new(device_type, 'Apple Watch', 'SE 2, 40mm, GPS')
+      when 'Watch6,11'
+        Model.new(device_type, 'Apple Watch', 'SE 2, 44mm, GPS')
+      when 'Watch6,12'
+        Model.new(device_type, 'Apple Watch', 'SE 2, 40mm, GPS+Cellular')
+      when 'Watch6,13'
+        Model.new(device_type, 'Apple Watch', 'SE 2, 44mm, GPS+Cellular')
+      when 'Watch6,14'
+        Model.new(device_type, 'Apple Watch', 'Series 8, 41mm, GPS')
+      when 'Watch6,15'
+        Model.new(device_type, 'Apple Watch', 'Series 8, 45mm, GPS')
+      when 'Watch6,16'
+        Model.new(device_type, 'Apple Watch', 'Series 8, 41mm, GPS+Cellular')
+      when 'Watch6,17'
+        Model.new(device_type, 'Apple Watch', 'Series 8, 45mm, GPS+Cellular')
+      when 'Watch6,18'
+        Model.new(device_type, 'Apple Watch', 'Ultra')
+      when 'Watch7,1'
+        Model.new(device_type, 'Apple Watch', 'Series 9, 41mm, GPS')
+      when 'Watch7,2'
+        Model.new(device_type, 'Apple Watch', 'Series 9, 45mm, GPS')
+      when 'Watch7,3'
+        Model.new(device_type, 'Apple Watch', 'Series 9, 41mm, GPS+Cellular')
+      when 'Watch7,4'
+        Model.new(device_type, 'Apple Watch', 'Series 9, 45mm, GPS+Cellular')
+      when 'Watch7,5'
+        Model.new(device_type, 'Apple Watch', 'Ultra 2')
       else
-        Model.new(device_type, 'Unknown iOS device')
+        Model.new(device_type, UNKNOWN_IOS_DEVICE)
       end
     end
   end
