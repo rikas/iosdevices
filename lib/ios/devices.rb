@@ -253,13 +253,13 @@ module Ios
       when 'iPad14,2'
         Model.new(device_type, 'iPad mini 6', 'Wi-Fi+LTE')
       when 'iPad14,3'
-        Model.new(device_type, 'iPad Pro 11', '4th Gen, Wi-Fi')
+        Model.new(device_type, 'iPad Pro 11"', '4th Gen, Wi-Fi')
       when 'iPad14,4'
-        Model.new(device_type, 'iPad Pro 11', '4th Gen, Wi-Fi+LTE')
+        Model.new(device_type, 'iPad Pro 11"', '4th Gen, Wi-Fi+LTE')
       when 'iPad14,5'
-        Model.new(device_type, 'iPad Pro 12.9', '6th Gen, Wi-Fi')
+        Model.new(device_type, 'iPad Pro 12.9"', '6th Gen, Wi-Fi')
       when 'iPad14,6'
-        Model.new(device_type, 'iPad Pro 12.9', '6th Gen, Wi-Fi+LTE')
+        Model.new(device_type, 'iPad Pro 12.9"', '6th Gen, Wi-Fi+LTE')
       when 'iPod1,1'
         Model.new(device_type, 'iPod touch')
       when 'iPod2,1'
