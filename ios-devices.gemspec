@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
@@ -11,9 +11,9 @@ Gem::Specification.new do |spec|
   spec.version       = Ios::Devices::VERSION
   spec.authors       = ['Ricardo Otero']
   spec.email         = ['oterosantos@gmail.com']
-  spec.summary       = %q{iOS device model translation from Apple device types.}
-  spec.description   = %q{With this gem you can read the device type that every iOS device can send
-    and translate it to a proper model name.}
+  spec.summary       = 'iOS device model translation from Apple device types.'
+  spec.description   = 'With this gem you can read the device type that every iOS device can send
+    and translate it to a proper model name.'
   spec.homepage      = 'http://github.com/rikas/iosdevices'
   spec.license       = 'MIT'
 
@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_development_dependency 'bundler', '~> 2.4.7'
-  spec.add_development_dependency 'rake', '~> 13.0.6'
   spec.add_development_dependency 'pry'
+  spec.add_development_dependency 'rake', '~> 13.0.6'
   spec.add_development_dependency 'rspec'
 end
