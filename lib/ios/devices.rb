@@ -110,6 +110,14 @@ module Ios
         Model.new(device_type, 'iPhone 15 Pro')
       when 'iPhone16,2'
         Model.new(device_type, 'iPhone 15 Pro Max')
+      when 'iPhone17,1'
+        Model.new(device_type, 'iPhone 16 Pro')
+      when 'iPhone17,2'
+        Model.new(device_type, 'iPhone 16 Pro Max')
+      when 'iPhone17,3'
+        Model.new(device_type, 'iPhone 16')
+      when 'iPhone17,4'
+        Model.new(device_type, 'iPhone 16 Plus')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad1,2'
