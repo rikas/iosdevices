@@ -354,8 +354,6 @@ module Ios
         Model.new(device_type, 'Apple Watch', 'Series 7, 45mm, GPS+Cellular')
       when 'Watch6,10'
         Model.new(device_type, 'Apple Watch', 'SE 2, 40mm, GPS')
-      when 'Watch6,10'
-        Model.new(device_type, 'Apple Watch', 'SE 2, 40mm, GPS')
       when 'Watch6,11'
         Model.new(device_type, 'Apple Watch', 'SE 2, 44mm, GPS')
       when 'Watch6,12'
