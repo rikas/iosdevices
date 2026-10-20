@@ -12,13 +12,14 @@ module Ios
     # Examples:
     #
     #  Ios::Devices.search('iPhone6,1')
-    #  => #<Ios::Devices::Model:0x007fa55ba1a948 @extra=nil, @name="iPhone 5s", @name="iPhone6,1">
+    #  => #<Ios::Devices::Model:0x007fa55ba1a948 @device_type="iPhone6,1", @name="iPhone 5s", @extra=nil>
     #
     #  Ios::Devices.search('iPad2,2')
-    #  => #<Ios::Devices::Model:0x007fa55b957308 @extra="GSM", @name="iPad 2", @name="iPad2,2">
+    #  => #<Ios::Devices::Model:0x007fa55b957308 @device_type="iPad2,2", @name="iPad 2", @extra="GSM">
+    #
+    # Unknown device types return a Model named Ios::UNKNOWN_IOS_DEVICE.
     def self.search(device_type)
-      # This list was taken from here:
-      # http://support.hockeyapp.net/kb/client-integration-ios-mac-os-x/ios-device-types
+      # Device identifiers can be checked against https://theapplewiki.com/wiki/Models
       case device_type
       when 'i386', 'x86_64', 'arm64'
         Model.new(device_type, 'iOS Simulator')

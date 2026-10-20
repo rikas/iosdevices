@@ -40,7 +40,26 @@ connection, revision model, etc.
 
   device.extra
   => "GSM"
+
+  device = Ios::Devices.search('iPhone99,1')
+  device.name
+  => "Unknown iOS device"  # Ios::UNKNOWN_IOS_DEVICE
 ```
+
+Simulator identifiers (`i386`, `x86_64`, `arm64`) return `"iOS Simulator"`.
+
+## Adding new devices
+
+Device identifiers live in `lib/ios/devices.rb`. When adding new ones:
+
+1. Check the identifiers against a reliable source such as
+   [The Apple Wiki](https://theapplewiki.com/wiki/Models) or [ipsw.me](https://ipsw.me).
+2. Follow the naming of the existing entries in the same family (iPhone, iPad, Watch, etc.).
+3. Make sure the identifier isn't already listed, since a duplicate is silently ignored.
+4. Add a spec for at least one of the new identifiers in `spec/ios_devices_spec.rb`.
+5. Add an entry to `CHANGELOG.md` under "Unreleased".
+
+Run the tests with `bundle exec rake`.
 
 ## Contributing
 
