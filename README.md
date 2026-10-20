@@ -50,7 +50,8 @@ Simulator identifiers (`i386`, `x86_64`, `arm64`) return `"iOS Simulator"`.
 
 ## Adding new devices
 
-Device identifiers live in `lib/ios/devices.rb`. When adding new ones:
+Device identifiers live in the `DEVICE_TYPES` hash in `lib/ios/devices/device_types.rb`, grouped
+by family. When adding new ones:
 
 1. Check the identifiers against at least two of these sources:
    - [AppleDB](https://appledb.dev/device-selection/iPhone.html): identifiers per model, including
@@ -64,7 +65,8 @@ Device identifiers live in `lib/ios/devices.rb`. When adding new ones:
    Identifiers for unreleased devices often show up in Xcode betas before Apple ships the
    hardware, and they can change. Prefer adding them after the device is released.
 2. Follow the naming of the existing entries in the same family (iPhone, iPad, Watch, etc.).
-3. Make sure the identifier isn't already listed, since a duplicate is silently ignored.
+3. Make sure the identifier isn't already listed. Ruby warns about duplicate keys and the specs
+   fail on them.
 4. Add a spec for at least one of the new identifiers in `spec/ios_devices_spec.rb`.
 5. Add an entry to `CHANGELOG.md` under the upcoming version.
 
