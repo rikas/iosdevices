@@ -25,6 +25,19 @@ below.
   11" and 12.9" iPad Pros say `1st gen`, and the 1TB models say `1TB`.
 - **Wording fixes:** `"iPhone 12 mini"` and `"iPhone 13 mini"` (was `Mini`), `4th gen`/`6th gen`
   (was `Gen`), and `Rev A` for revised models.
+- **`Ios::Devices::Model` is immutable:** `device_type=`, `name=` and `extra=` are gone and models
+  are frozen. `search` returns the same shared instance each time for a known device type.
+- **`Ios::UNKNOWN_IOS_DEVICE` is deprecated** in favour of `Ios::Devices::UNKNOWN_IOS_DEVICE`. The old
+  constant still works; Ruby warns about it when deprecation warnings are on (`-W:deprecated`).
+
+### Added
+
+- `Ios::Devices.all` lists every known device model, and `Ios::Devices.known?(device_type)` checks
+  whether a device type is known.
+- `Model#known?` and `Model#unknown?`.
+- `Model#to_s` returns the full name, e.g. `"iPad mini (A17 Pro, Wi-Fi+Cellular)"`, and `Model#to_h`
+  returns the attributes as a hash.
+- Models with the same attributes are equal (`==`, `eql?`, `hash`).
 
 ### Other changes
 
