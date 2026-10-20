@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented in this file.
 
-## 0.4.0 - Unreleased
+## 0.4.0 - 2026-10-20
 
 - **Require Ruby 3.1 or later.** Ruby 2.6, 2.7 and 3.0 are end-of-life and no longer tested.
 - Ship only the library files, README, LICENSE and CHANGELOG in the packaged gem.
