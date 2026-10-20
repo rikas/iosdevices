@@ -5,6 +5,8 @@ All notable changes to this project are documented in this file.
 ## Unreleased
 
 - Test against Ruby 4.0 in CI.
+- Move the device list out of a `case` statement into a frozen hash, with specs that check it for
+  duplicates and malformed entries. Lookup results are unchanged.
 
 ## 0.4.0 - 2026-10-20
 
