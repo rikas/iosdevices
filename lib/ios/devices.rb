@@ -16,7 +16,7 @@ module Ios
     #  => #<Ios::Devices::Model:0x007fa55ba1a948 @device_type="iPhone6,1", @name="iPhone 5s", @extra=nil>
     #
     #  Ios::Devices.search('iPad2,2')
-    #  => #<Ios::Devices::Model:0x007fa55b957308 @device_type="iPad2,2", @name="iPad 2", @extra="GSM">
+    #  => #<Ios::Devices::Model:0x007fa55b957308 @device_type="iPad2,2", @name="iPad 2", @extra="Wi-Fi+Cellular, GSM">
     #
     # Unknown device types return a Model named Ios::UNKNOWN_IOS_DEVICE.
     def self.search(device_type)

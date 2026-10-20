@@ -59,6 +59,12 @@ describe Ios::Devices do
       it { expect(model.extra).to eq('2nd gen') }
     end
 
+    context 'with iPhone13,1' do
+      let(:input) { 'iPhone13,1' }
+
+      it { expect(model.name).to eq('iPhone 12 mini') }
+    end
+
     context 'with iPhone18,5' do
       let(:input) { 'iPhone18,5' }
 
@@ -87,14 +93,35 @@ describe Ios::Devices do
       let(:input) { 'iPad2,2' }
 
       it { expect(model.name).to eq('iPad 2') }
-      it { expect(model.extra).to eq('GSM') }
+      it { expect(model.extra).to eq('Wi-Fi+Cellular, GSM') }
     end
 
     context 'with iPad4,3' do
       let(:input) { 'iPad4,3' }
 
       it { expect(model.name).to eq('iPad Air') }
-      it { expect(model.extra).to eq('Rev') }
+      it { expect(model.extra).to eq('Wi-Fi+Cellular, China') }
+    end
+
+    context 'with iPad5,1' do
+      let(:input) { 'iPad5,1' }
+
+      it { expect(model.name).to eq('iPad mini 4') }
+      it { expect(model.extra).to eq('Wi-Fi') }
+    end
+
+    context 'with iPad14,1' do
+      let(:input) { 'iPad14,1' }
+
+      it { expect(model.name).to eq('iPad mini') }
+      it { expect(model.extra).to eq('6th gen, Wi-Fi') }
+    end
+
+    context 'with iPad16,2' do
+      let(:input) { 'iPad16,2' }
+
+      it { expect(model.name).to eq('iPad mini') }
+      it { expect(model.extra).to eq('A17 Pro, Wi-Fi+Cellular') }
     end
 
     context 'with iPad16,3' do
@@ -108,7 +135,7 @@ describe Ios::Devices do
       let(:input) { 'iPad17,4' }
 
       it { expect(model.name).to eq('iPad Pro 13"') }
-      it { expect(model.extra).to eq('M5, Wi-Fi+LTE') }
+      it { expect(model.extra).to eq('M5, Wi-Fi+Cellular') }
     end
 
     context 'with iPod1,1' do
@@ -129,28 +156,35 @@ describe Ios::Devices do
       let(:input) { 'Watch1,1' }
 
       it { expect(model.name).to eq('Apple Watch') }
-      it { expect(model.extra).to eq('38mm') }
+      it { expect(model.extra).to eq('1st gen, 38mm') }
     end
 
     context 'with Watch5,4' do
       let(:input) { 'Watch5,4' }
 
-      it { expect(model.name).to eq('Apple Watch') }
-      it { expect(model.extra).to eq('Series 5, 44mm, GPS+Cellular') }
+      it { expect(model.name).to eq('Apple Watch Series 5') }
+      it { expect(model.extra).to eq('44mm, GPS+Cellular') }
+    end
+
+    context 'with Watch6,10' do
+      let(:input) { 'Watch6,10' }
+
+      it { expect(model.name).to eq('Apple Watch SE') }
+      it { expect(model.extra).to eq('2nd gen, 40mm, GPS') }
     end
 
     context 'with Watch7,12' do
       let(:input) { 'Watch7,12' }
 
-      it { expect(model.name).to eq('Apple Watch') }
-      it { expect(model.extra).to eq('Ultra 3') }
+      it { expect(model.name).to eq('Apple Watch Ultra 3') }
+      it { expect(model.extra).to be_nil }
     end
 
     context 'with Watch7,20' do
       let(:input) { 'Watch7,20' }
 
-      it { expect(model.name).to eq('Apple Watch') }
-      it { expect(model.extra).to eq('Series 11, 46mm, GPS+Cellular') }
+      it { expect(model.name).to eq('Apple Watch Series 11') }
+      it { expect(model.extra).to eq('46mm, GPS+Cellular') }
     end
   end
 end

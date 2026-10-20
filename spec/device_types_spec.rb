@@ -41,6 +41,31 @@ describe 'Ios::Devices::DEVICE_TYPES' do
     expect(invalid).to be_empty
   end
 
+  it 'keeps generations out of names' do
+    # Apple's "iPad mini (6th generation)" is 'iPad mini' with '6th gen' in extra.
+    invalid = device_types.select { |_, (name, _)| name.match?(/\d(st|nd|rd|th) gen/i) || name.include?('Mini') }
+
+    expect(invalid).to be_empty
+  end
+
+  it 'uses a consistent vocabulary and order in extras' do
+    # Each part of an extra must belong to one of these groups, in this order.
+    groups = [
+      /\A(\d+(st|nd|rd|th) gen|M\d+|A\d+( Pro)?)\z/, # generation or chip
+      /\A\d+mm\z/,                                    # size
+      /\A(Wi-Fi|Wi-Fi\+Cellular|GPS|GPS\+Cellular)\z/, # connectivity
+      /\A(GSM|CDMA|China|Rev A|1TB)\z/ # variant
+    ]
+
+    invalid = device_types.reject do |_, (_, extra)|
+      indexes = extra.to_s.split(', ').map { |part| groups.index { |group| part.match?(group) } }
+
+      indexes.none?(&:nil?) && indexes == indexes.sort
+    end
+
+    expect(invalid).to be_empty
+  end
+
   it 'is frozen' do
     expect(device_types).to be_frozen
     expect(device_types.values).to all(be_frozen)
