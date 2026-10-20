@@ -42,12 +42,37 @@ connectivity and variant (see [Naming](#naming)).
   device.extra
   => "Wi-Fi+Cellular, GSM"
 
+  device.to_s
+  => "iPad 2 (Wi-Fi+Cellular, GSM)"
+
+  device.to_h
+  => {device_type: "iPad2,2", name: "iPad 2", extra: "Wi-Fi+Cellular, GSM"}
+
   device = Ios::Devices.search('iPhone99,1')
   device.name
-  => "Unknown iOS device"  # Ios::UNKNOWN_IOS_DEVICE
+  => "Unknown iOS device"  # Ios::Devices::UNKNOWN_IOS_DEVICE
+
+  device.known?
+  => false
 ```
 
 Simulator identifiers (`i386`, `x86_64`, `arm64`) return `"iOS Simulator"`.
+
+Models are immutable, and two models with the same attributes are equal (`==`, `eql?` and
+`hash`), so they work as hash keys and with `uniq`.
+
+You can also check a device type or list every known device:
+
+```ruby
+  Ios::Devices.known?('iPhone6,1')
+  => true
+
+  Ios::Devices.all.size
+  => 239
+
+  Ios::Devices.all.select { |device| device.name == 'iPad mini' }.map(&:to_s)
+  => ["iPad mini (Wi-Fi)", "iPad mini (Wi-Fi+Cellular, GSM)", ...]
+```
 
 ## Naming
 

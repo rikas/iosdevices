@@ -3,6 +3,28 @@
 require 'spec_helper'
 
 describe Ios::Devices do
+  describe '.known?' do
+    it { expect(described_class.known?('iPhone6,1')).to be(true) }
+    it { expect(described_class.known?('iPhone0,0')).to be(false) }
+    it { expect(described_class.known?(nil)).to be(false) }
+  end
+
+  describe '.all' do
+    subject(:models) { described_class.all }
+
+    it { is_expected.to all(be_a(Ios::Devices::Model)) }
+    it { is_expected.to all(be_known) }
+    it { expect(models.map(&:device_type)).to include('i386', 'iPhone6,1', 'iPad16,2', 'iPod9,1', 'Watch7,20') }
+    it { expect(models.map(&:device_type).uniq.size).to eq(models.size) }
+    it { expect(models).to include(described_class.search('iPad2,2')) }
+
+    it 'cannot be used to change the device list' do
+      models.clear
+
+      expect(described_class.all).not_to be_empty
+    end
+  end
+
   describe '.search' do
     subject(:model) { Ios::Devices.search(input) }
 
@@ -10,6 +32,7 @@ describe Ios::Devices do
       let(:input) { 'iPhone6,2' }
 
       it { is_expected.to be_a(Ios::Devices::Model) }
+      it { is_expected.to be_known }
       it { expect(model.device_type).to eq('iPhone6,2') }
       it { expect(model.name).to eq('iPhone 5s') }
       it { expect(model.extra).to be_nil }
@@ -18,16 +41,34 @@ describe Ios::Devices do
     context 'with an unknown device type' do
       let(:input) { 'iPad8,13' }
 
+      it { is_expected.to be_unknown }
+
       it { is_expected.to be_a(Ios::Devices::Model) }
       it { expect(model.device_type).to eq('iPad8,13') }
-      it { expect(model.name).to eq(Ios::UNKNOWN_IOS_DEVICE) }
+      it { expect(model.name).to eq(Ios::Devices::UNKNOWN_IOS_DEVICE) }
       it { expect(model.extra).to be_nil }
+    end
+
+    context 'with the deprecated Ios::UNKNOWN_IOS_DEVICE constant' do
+      let(:input) { 'iPad8,13' }
+
+      around do |example|
+        deprecated = Warning[:deprecated]
+        Warning[:deprecated] = true
+        example.run
+      ensure
+        Warning[:deprecated] = deprecated
+      end
+
+      it 'still works and warns when deprecation warnings are on' do
+        expect { expect(model.name).to eq(Ios::UNKNOWN_IOS_DEVICE) }.to output(/deprecated/).to_stderr
+      end
     end
 
     context 'with nil' do
       let(:input) { nil }
 
-      it { expect(model.name).to eq(Ios::UNKNOWN_IOS_DEVICE) }
+      it { expect(model.name).to eq(Ios::Devices::UNKNOWN_IOS_DEVICE) }
     end
 
     %w[i386 x86_64 arm64].each do |simulator|
