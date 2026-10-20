@@ -11,7 +11,7 @@ All notable changes to this project are documented in this file.
 - Fix the example output in the `Ios::Devices.search` doc comment and remove the dead HockeyApp link.
 - Broaden spec coverage (simulators, unknown and `nil` input, older iPhone, iPad, iPod and Watch models).
 - Document how to add new devices in the README.
-- Add iPhone 17e, iPhone 18 Pro, iPhone 18 Pro Max and iPhone Duo.
+- Add iPhone 17e, iPhone 18 Pro and iPhone 18 Pro Max.
 - Add iPad Air (M2, M3, M4), iPad 11th gen, iPad mini 7 and iPad Pro (M4, M5).
 - Add Apple Watch Series 10, Ultra 3, SE 3 and Series 11.
 - Remove a duplicate "Apple Watch SE 2, 40mm, GPS" entry.

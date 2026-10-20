@@ -135,8 +135,6 @@ module Ios
         Model.new(device_type, 'iPhone 18 Pro')
       when 'iPhone19,3', 'iPhone19,7'
         Model.new(device_type, 'iPhone 18 Pro Max')
-      when 'iPhone19,4'
-        Model.new(device_type, 'iPhone Duo')
       when 'iPad1,1'
         Model.new(device_type, 'iPad')
       when 'iPad1,2'

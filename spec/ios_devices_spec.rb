@@ -83,12 +83,6 @@ describe Ios::Devices do
       it { expect(model.name).to eq('iPhone 18 Pro Max') }
     end
 
-    context 'with iPhone19,4' do
-      let(:input) { 'iPhone19,4' }
-
-      it { expect(model.name).to eq('iPhone Duo') }
-    end
-
     context 'with iPad2,2' do
       let(:input) { 'iPad2,2' }
 
