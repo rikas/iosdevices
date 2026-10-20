@@ -60,7 +60,7 @@ below.
 - Add Apple Watch Series 10, Ultra 3, SE 3 and Series 11.
 - Remove a duplicate "Apple Watch SE 2, 40mm, GPS" entry.
 
-## 0.3.5 - 2025-10-22
+## 0.3.5 - 2025-10-27
 
 - Add iPhone 17, iPhone 17 Pro, iPhone 17 Pro Max and iPhone Air.
 
