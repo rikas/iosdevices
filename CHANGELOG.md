@@ -2,7 +2,7 @@
 
 All notable changes to this project are documented in this file.
 
-## Unreleased
+## 0.4.0 - Unreleased
 
 - **Require Ruby 3.1 or later.** Ruby 2.6, 2.7 and 3.0 are end-of-life and no longer tested.
 - Ship only the library files, README, LICENSE and CHANGELOG in the packaged gem.
@@ -11,9 +11,6 @@ All notable changes to this project are documented in this file.
 - Fix the example output in the `Ios::Devices.search` doc comment and remove the dead HockeyApp link.
 - Broaden spec coverage (simulators, unknown and `nil` input, older iPhone, iPad, iPod and Watch models).
 - Document how to add new devices in the README.
-
-## 0.3.6 - 2026-10-20 (not yet published)
-
 - Add iPhone 17e, iPhone 18 Pro, iPhone 18 Pro Max and iPhone Duo.
 - Add iPad Air (M2, M3, M4), iPad 11th gen, iPad mini 7 and iPad Pro (M4, M5).
 - Add Apple Watch Series 10, Ultra 3, SE 3 and Series 11.

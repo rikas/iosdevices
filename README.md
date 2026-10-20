@@ -57,7 +57,7 @@ Device identifiers live in `lib/ios/devices.rb`. When adding new ones:
 2. Follow the naming of the existing entries in the same family (iPhone, iPad, Watch, etc.).
 3. Make sure the identifier isn't already listed, since a duplicate is silently ignored.
 4. Add a spec for at least one of the new identifiers in `spec/ios_devices_spec.rb`.
-5. Add an entry to `CHANGELOG.md` under "Unreleased".
+5. Add an entry to `CHANGELOG.md` under the upcoming version.
 
 Run the tests with `bundle exec rake`.
 
