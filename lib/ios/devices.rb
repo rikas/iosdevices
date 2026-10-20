@@ -19,7 +19,7 @@ module Ios
     #
     # Unknown device types return a Model named Ios::UNKNOWN_IOS_DEVICE.
     def self.search(device_type)
-      # Device identifiers can be checked against https://theapplewiki.com/wiki/Models
+      # See "Adding new devices" in the README for sources to check identifiers against.
       case device_type
       when 'i386', 'x86_64', 'arm64'
         Model.new(device_type, 'iOS Simulator')
