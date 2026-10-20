@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented in this file.
 
+## Unreleased
+
+- Test against Ruby 4.0 in CI.
+
 ## 0.4.0 - 2026-10-20
 
 - **Require Ruby 3.1 or later.** Ruby 2.6, 2.7 and 3.0 are end-of-life and no longer tested.
