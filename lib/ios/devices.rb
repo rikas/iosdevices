@@ -4,7 +4,9 @@ require 'ios/devices/version'
 require 'ios/devices/model'
 require 'ios/devices/device_types'
 
+# Namespace for the ios-devices gem.
 module Ios
+  # Translates Apple device types (like "iPhone6,1") to device models.
   module Devices
     UNKNOWN_IOS_DEVICE = 'Unknown iOS device'
 

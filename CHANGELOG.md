@@ -41,6 +41,7 @@ below.
 
 ### Other changes
 
+- Add RuboCop (run by `bundle exec rake` and in CI).
 - Test against Ruby 4.0 in CI.
 - Move the device list out of a `case` statement into a frozen hash, with specs that check it for
   duplicates and malformed entries.

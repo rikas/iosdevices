@@ -108,13 +108,13 @@ by family. When adding new ones:
    Identifiers for unreleased devices often show up in Xcode betas before Apple ships the
    hardware, and they can change. Prefer adding them after the device is released.
 2. Follow the [naming rules](#naming). If you need a new kind of `extra` part, add it to the
-   vocabulary in `spec/device_types_spec.rb`.
+   vocabulary in `spec/ios/devices/device_types_spec.rb`.
 3. Make sure the identifier isn't already listed. Ruby warns about duplicate keys and the specs
    fail on them.
-4. Add a spec for at least one of the new identifiers in `spec/ios_devices_spec.rb`.
+4. Add a spec for at least one of the new identifiers in `spec/ios/devices_spec.rb`.
 5. Add an entry to `CHANGELOG.md` under the upcoming version.
 
-Run the tests with `bundle exec rake`.
+Run the tests and RuboCop with `bundle exec rake` (or just the tests with `bundle exec rake spec`).
 
 ## Contributing
 

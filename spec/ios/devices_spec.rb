@@ -26,7 +26,7 @@ describe Ios::Devices do
   end
 
   describe '.search' do
-    subject(:model) { Ios::Devices.search(input) }
+    subject(:model) { described_class.search(input) }
 
     context 'with a known device type' do
       let(:input) { 'iPhone6,2' }
@@ -60,7 +60,7 @@ describe Ios::Devices do
         Warning[:deprecated] = deprecated
       end
 
-      it 'still works and warns when deprecation warnings are on' do
+      it 'still works and warns when deprecation warnings are on', :aggregate_failures do
         expect { expect(model.name).to eq(Ios::UNKNOWN_IOS_DEVICE) }.to output(/deprecated/).to_stderr
       end
     end
