@@ -38,6 +38,8 @@ below.
 - `Model#to_s` returns the full name, e.g. `"iPad mini (A17 Pro, Wi-Fi+Cellular)"`, and `Model#to_h`
   returns the attributes as a hash.
 - Models with the same attributes are equal (`==`, `eql?`, `hash`).
+- Add iPhone Duo (`iPhone19,4`).
+- Add Apple Watch Ultra 4 (`Watch8,1`) and Apple Watch Series 12 (`Watch8,2`–`Watch8,5`).
 
 ### Other changes
 
