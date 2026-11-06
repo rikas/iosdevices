@@ -78,6 +78,7 @@ module Ios
       'iPhone18,5' => ['iPhone 17e'],
       'iPhone19,2' => ['iPhone 18 Pro'],
       'iPhone19,3' => ['iPhone 18 Pro Max'],
+      'iPhone19,4' => ['iPhone Duo'],
       'iPhone19,7' => ['iPhone 18 Pro Max'],
 
       # iPad
@@ -254,7 +255,12 @@ module Ios
       'Watch7,17' => ['Apple Watch Series 11', '42mm, GPS'],
       'Watch7,18' => ['Apple Watch Series 11', '46mm, GPS'],
       'Watch7,19' => ['Apple Watch Series 11', '42mm, GPS+Cellular'],
-      'Watch7,20' => ['Apple Watch Series 11', '46mm, GPS+Cellular']
+      'Watch7,20' => ['Apple Watch Series 11', '46mm, GPS+Cellular'],
+      'Watch8,1' => ['Apple Watch Ultra 4'],
+      'Watch8,2' => ['Apple Watch Series 12', '42mm, GPS'],
+      'Watch8,3' => ['Apple Watch Series 12', '46mm, GPS'],
+      'Watch8,4' => ['Apple Watch Series 12', '42mm, GPS+Cellular'],
+      'Watch8,5' => ['Apple Watch Series 12', '46mm, GPS+Cellular']
     }.transform_values(&:freeze).freeze
     private_constant :DEVICE_TYPES
   end

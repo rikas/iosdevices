@@ -68,7 +68,7 @@ You can also check a device type or list every known device:
   => true
 
   Ios::Devices.all.size
-  => 239
+  => 245
 
   Ios::Devices.all.select { |device| device.name == 'iPad mini' }.map(&:to_s)
   => ["iPad mini (Wi-Fi)", "iPad mini (Wi-Fi+Cellular, GSM)", ...]

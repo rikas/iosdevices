@@ -130,6 +130,13 @@ describe Ios::Devices do
       it { expect(model.name).to eq('iPhone 18 Pro Max') }
     end
 
+    context 'with iPhone19,4' do
+      let(:input) { 'iPhone19,4' }
+
+      it { expect(model.name).to eq('iPhone Duo') }
+      it { expect(model.extra).to be_nil }
+    end
+
     context 'with iPad2,2' do
       let(:input) { 'iPad2,2' }
 
@@ -226,6 +233,20 @@ describe Ios::Devices do
 
       it { expect(model.name).to eq('Apple Watch Series 11') }
       it { expect(model.extra).to eq('46mm, GPS+Cellular') }
+    end
+
+    context 'with Watch8,1' do
+      let(:input) { 'Watch8,1' }
+
+      it { expect(model.name).to eq('Apple Watch Ultra 4') }
+      it { expect(model.extra).to be_nil }
+    end
+
+    context 'with Watch8,4' do
+      let(:input) { 'Watch8,4' }
+
+      it { expect(model.name).to eq('Apple Watch Series 12') }
+      it { expect(model.extra).to eq('42mm, GPS+Cellular') }
     end
   end
 end
